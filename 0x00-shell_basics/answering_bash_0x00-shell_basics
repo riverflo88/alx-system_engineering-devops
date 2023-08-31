@@ -89,6 +89,7 @@ cat > school.mgc << _EOF_
 #!/bin/bash
 echo '0 string SCHOOL School data file' > school.magic
 file -C -m school.magic
+file -m school.mgc .
 _EOF_
 
 chmod u+x *

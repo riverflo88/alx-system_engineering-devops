@@ -1,0 +1,96 @@
+#!/bin/bash
+cat > 2-bring_me_home << _EOF_
+#!/bin/bash
+cd ~
+_EOF_
+
+cat > 3-listfiles << _EOF_
+#!/bin/bash
+ls -l
+_EOF_
+
+cat > 4-listmorefiles << _EOF_
+#!/bin/bash
+ls -al
+_EOF_
+
+cat > 5-listfilesdigitonly << _EOF_
+#!/bin/bash
+ls -lna
+_EOF_
+
+cat > 6-firstdirectory << _EOF_
+#!/bin/bash
+mkdir /tmp/my_first_directory
+_EOF_
+
+cat > 7-movethatfile << _EOF_
+#!/bin/bash
+mv /tmp/betty /tmp/my_first_directory
+_EOF_
+
+cat > 8-firstdelete << _EOF_
+#!/bin/bash
+rm /tmp/my_first_directory/betty
+_EOF_
+
+cat > 9-firstdirdeletion << _EOF_
+#!/bin/bash
+rm -r /tmp/my_first_directory
+_EOF_
+
+cat > 10-back << _EOF_
+#!/bin/bash
+cd -
+_EOF_
+
+cat > 11-lists << _EOF_
+#!/bin/bash
+ls -la . ..  /boot
+_EOF_
+
+cat > 12-file_type << _EOF_
+#!/bin/bash
+file /tmp/iamafile
+_EOF_
+
+cat > 13-symbolic_link << _EOF_
+#!/bin/bash
+ln -s /bin/ls __ls__
+_EOF_
+
+cat > 14-copy_html << _EOF_
+#!/bin/bash
+cp -ur ./*.html ..
+_EOF_
+
+cat > 100-lets_move << _EOF_
+#!/bin/bash
+mv [A-Z]* /tmp/u/
+_EOF_
+
+cat > 101-clean_emacs << _EOF_
+#!/bin/bash
+rm ./*~
+_EOF_
+
+cat > 102-tree << _EOF_
+#!/bin/bash
+rm ./*~
+_EOF_
+
+cat > 103-commas << _EOF_
+#!/bin/bash
+ls -xamp
+_EOF_
+
+
+cat > school.mgc << _EOF_
+#!/bin/bash
+echo '0 string SCHOOL School data file' > school.magic
+file -C -m school.magic
+_EOF_
+
+chmod u+x *
+#find . -maxdepth 1 -type f ! -name 'answer*' -exec chmod u+x {} \
+#chmod u+x 2-bring_me_home 3-listfiles 4-listmorefiles 5-listfilesdigitonly 6-firstdirectory 7-movethatfile 8-firstdelete 9-firstdirdeletion 10-back 11-lists 12-file_type 13-symbolic_link 14-copy_html 100-lets_move 101-clean_emacs 
